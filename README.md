@@ -51,4 +51,4 @@ From the meta developer page you can navigate to your app and then to *Webhook* 
 
 My AWS lambda function is configured with a 20 seconds timeout. This seems ok most of the times, but with audio messages > 2 minutes many times the function is not able to complete as most of the time is spent waiting for an answer to the *OPENAI's Transcribe API*. Please be aware that if the function is not able to process the response in time the Whatsapp API will try to contact again the webhook, and it will do so until it will receive a *200 - OK* response.
 
-A future improvement of the webhook will be to process the API integration on an SQS Queue so that time time spent waiting ofr OPENAI APIs will not count against the Lambda running time.
+
